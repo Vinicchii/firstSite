@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'DejaVu';
+    src: url(DejaVuSerif.ttf);
+}
+
+@font-face {
+    font-family: 'DejaVuB';
+    src: url(DejaVuSerif-Bold.ttf);
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #24055A;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxProfile{
+    width: 250px;
+    height: 630px;
+    margin: 10px;
+    
+}
+
+.profile {
+    background-color: #624595;
+    height: 370px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 20px #000000;
+    animation: fromTop .7s .3s backwards;
+}
+
+.profileBottom {
+    background-color: #624595;
+    height: 230px;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 20px #000000;
+    animation: fromTop .7s .2s backwards;
+}
+
+.boxSec{
+    width: 400px;
+    height: 630px;
+    margin: 10px;
+    display: grid;
+}
+
+.secao{
+    height: 250px;
+    margin:10px;
+    background-color: #624594;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 20px #000000;
+    animation: fromRight .7s .2s;
+}
+
+.secaoMid{
+    height: 250px;
+    margin:10px;
+    background-color: #624594;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 10px 10px 20px #000000;
+    animation: fromRight .7s .3s;
+}
+
+.secaoBot{
+    height: 80px;
+    margin:10px;
+    background-color: #624595;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #000000;
+    animation: fromRight .7s .4s;
+}
+
+img.pPic {
+    margin: 10px;
+    border-radius: 100%;
+}
+
+.desc{
+    text-align: center;
+}
+
+.secTitle{
+    text-align: center;
+}
+
+ul {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: -40px;
+}
+
+.imgBot{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: -40px;
+    margin-top: 10px;
+}
+h1, h2, h3, h4{
+    text-align: center;
+    font-family: Dejavu;
+}
+h4{
+    margin: 0;
+    padding: 5px;
+}
+
+/* animação */
+
+img.pPic:hover {
+    border-radius: 30%;
+    transition: 0.4s;
+    box-shadow: 10px 5px 5px black;
+}
+
+img.pPic:not(:hover) {
+    transition: 0.4s;
+    
+}
+
+img.imgsec:hover {
+    opacity: 60%;
+    transition: 0.4s;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 1px black;
+}
+
+img.imgsec:not(:hover) {
+    transition: 0.4s;
+    border-radius: 3px;
+}
+
+img.imgsocial:hover{
+    box-shadow: 10px 10px 10px 1px black;
+    border-radius: 100%;
+    transition: 0.4s;
+}
+
+img.imgsocial:not(:hover) {
+    transition: 0.4s;
+}
+
+.typewriter {
+    animation-delay: 1s;
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: white;
+    }
+    100% {
+        border-top: transparent;
+    }
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-250px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+ }
+
+ @keyframes fromRight {
+    from {
+        opacity: 0;
+        transform: translateX(500px)
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+ }
+
+ /* Responsividade */
+
+ @media screen and (max-width: 600px){
+    .profileBottom{
+        display:none;
+    }
+    .container{
+        margin-top: 0px;
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .boxProfile{
+        width: 100%;
+        height: 380px;
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .boxSec{
+        width: 100%;
+    }
+}
